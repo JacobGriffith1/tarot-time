@@ -1,0 +1,40 @@
+body {
+    background-color: #232253;
+}
+
+header {
+    padding-top: 20px;
+}
+header h1, header h4 {
+    text-align: center;
+    color: #5DCED7;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    margin: 0 auto;         /* Center the container itself if it has a specific width */
+    margin-top: 75px;
+    gap: 15px;
+    width: fit-content;
+}
+.reading-card {
+    margin-bottom: 50px;
+}
+.card {
+    width: 150px;
+    height: 290px;
+}
+.image-text {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .image {
+    width: 200px;
+    height: auto;
+  }
+  
+  .text {
+    flex-grow: 1;
+  }

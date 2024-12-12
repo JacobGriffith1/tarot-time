@@ -1,0 +1,29 @@
+/* Set the background image for the body */
+body {
+    background-image: url('images/space_bg.png');
+    background-size: 80%; /* Ensures the image covers the entire page */
+    background-position: center; /* Keeps the image centered */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+.container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1 {
+    position: relative;
+    top: 1px;
+    margin-bottom: 50px;
+    color: #ECD444;
+}
+.container img {
+    margin-top: 1px;
+    margin-left: -1px;
+    position: absolute;
+    left: 51%;
+    transform: translateX(-50%);
+}
