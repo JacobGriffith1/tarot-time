@@ -46,3 +46,16 @@ header h1, header h4 {
 .reading-card p {
     font-size: 24px;
 }
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #5DCED7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
