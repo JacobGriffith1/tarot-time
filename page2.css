@@ -63,6 +63,11 @@ main {
     translate: calc(var(--i) *1px) -50px;
     z-index: 100;
 }
+#selected-cards-count {
+    font-size: 24px;
+    color: #5DCED7;
+    text-align: center;
+}
 
 /* new styles */
 .reading-card {
@@ -80,9 +85,4 @@ main {
 }
 .text {
     flex-grow: 1;
-}
-#selected-cards-count {
-    font-size: 24px;
-    color: #5DCED7;
-    text-align: center;
 }
