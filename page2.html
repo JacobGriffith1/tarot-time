@@ -46,6 +46,7 @@
     const cards = document.querySelectorAll('.container .card');
     let selectedCardsCount = 0;
     let cardValues = 1;
+    let clickedCardCount = 0;  // Track how many selected cards have been clicked
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
@@ -93,6 +94,18 @@
 
                 card.dataset.value = 'a';
                 card.classList.add('disabled');
+                clickedCardCount++;  // Increment the count of clicked cards
+
+                // Change header text based on how many cards have been clicked
+                if (clickedCardCount === 1) {
+                    document.querySelector('header h1').textContent = 'What fears are you holding back?';
+                } else if (clickedCardCount === 2) {
+                    document.querySelector('header h1').textContent = 'Your strengths';
+                } else if (clickedCardCount === 3) {
+                    document.querySelector('header h1').textContent = 'Weaknesses';
+                } else if (clickedCardCount === 4) {
+                    document.querySelector('header h1').textContent = 'Your potential';
+                }
             });
         });
     }
