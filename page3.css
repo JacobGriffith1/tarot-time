@@ -10,10 +10,8 @@ header h1, header h4 {
     color: #5DCED7;
 }
 .playing-card {
-    width: 150px;
-    height: 290px;
-    margin: 10px;
-    /*perspective: 1000px;*/
+    width: calc(33.33% - 20px); /* This creates 3 columns */
+    max-width: 200px;
 }
 .flip-card {
     position: relative;
@@ -41,13 +39,13 @@ header h1, header h4 {
     width: 170px;
     height: 300px;
 }
-.card-container {
+.container {
     display: flex;
-    justify-content: center; /* Center the items horizontally */
-    margin: 0 auto;         /* Center the container itself if it has a specific width */
-    margin-top: 75px;
-    gap: 15px;
-    width: fit-content;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*margin: 0 auto;         /* Center the container itself if it has a specific width */
+    /*margin-top: 75px;*/
+    gap: 20px;
 }
 .reading-card {
     padding-top: 20px;
