@@ -13,7 +13,9 @@
         <h1>Select 5 Cards</h1>
     </header>
 
+    <div id="selected-cards-count">0</div>
     <main>
+        <!-- Cards Spread -->
         <div class="container">
             <div class="card" style="--i:-11;"><img src="images/image1.jpg" alt="Image 1"></div>
             <div class="card" style="--i:-10;"><img src="images/image1.jpg" alt="Image 1"></div>
@@ -39,15 +41,102 @@
             <div class="card" style="--i:10;"><img src="images/image1.jpg" alt="Image 1"></div>
         </div>
     </main>
-
-    <footer>
-        <button type="button" id="getReadingBtn">Get My Reading</button>
-    </footer>
-
     <script>
-        document.getElementById('getReadingBtn').addEventListener('click', function() {
-            window.location.href = 'page3.html';
-        })
+        document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.container .card');
+    let selectedCardsCount = 0;
+    let cardValues = 1;
+    let clickedCardCount = 0; // Track how many selected cards have been clicked
+    let firstCardClicked = false;
+    let secondCardClicked = false;
+    let thirdCardClicked = false;
+    let fourthCardClicked = false; 
+    let fifthCardClicked = false; // Track if the fifth card is clicked
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            if (card.dataset.value >= 1 && card.dataset.value <= 5) return;
+
+            if (!card.classList.contains('selected') && selectedCardsCount < 5) {
+                card.classList.add('selected');
+                card.dataset.value = cardValues++;
+                selectedCardsCount++;
+            } else if (card.classList.contains('selected')) {
+                card.classList.remove('selected');
+                card.dataset.value = '';
+                cardValues--;
+                selectedCardsCount--;
+            }
+
+            document.getElementById('selected-cards-count').textContent = selectedCardsCount;
+
+            if (selectedCardsCount === 5) {
+                document.querySelector('header h1').textContent = 'Current Situation';
+                document.querySelector('header').classList.add('current-situation');
+
+                cards.forEach(card => {
+                    if (!card.classList.contains('selected')) {
+                        card.dataset.value = 0;
+                        card.style.display = 'none';
+                    }
+                });
+
+                const selectedCards = document.querySelectorAll('.container .card.selected');
+                selectedCards.forEach((card, index) => {
+                    card.style.position = 'relative';
+                    card.style.transform = `translate(${index * 15}px, 0)`;
+                });
+
+                enableCardClicks(selectedCards);
+            }
+        });
+    });
+
+    function enableCardClicks(selectedCards) {
+        selectedCards.forEach(card => {
+            card.addEventListener('click', () => {
+                if (card.classList.contains('disabled')) return;
+
+                if (!firstCardClicked) {
+                    card.dataset.value = 'a';
+                    firstCardClicked = true;
+                    console.log('First card clicked (assigned "a"):', card);
+                } else if (!secondCardClicked && document.querySelector('header h1').textContent === 'What fears are you holding back?') {
+                    card.dataset.value = 'b';
+                    secondCardClicked = true;
+                    console.log('Second card clicked (assigned "b"):', card);
+                } else if (!thirdCardClicked && document.querySelector('header h1').textContent === 'Your strengths') {
+                    card.dataset.value = 'c';
+                    thirdCardClicked = true;
+                    console.log('Third card clicked (assigned "c"):', card);
+                } else if (!fourthCardClicked && document.querySelector('header h1').textContent === 'Weaknesses') {
+                    card.dataset.value = 'd';
+                    fourthCardClicked = true;
+                    console.log('Fourth card clicked (assigned "d"):', card);
+                } else if (!fifthCardClicked && document.querySelector('header h1').textContent === 'Your potential') {
+                    card.dataset.value = 'e';
+                    fifthCardClicked = true;
+                    console.log('Fifth card clicked (assigned "e"):', card);
+                }
+
+                card.classList.add('disabled');
+                clickedCardCount++; // Increment the count of clicked cards
+
+                // Change header text based on how many cards have been clicked
+                if (clickedCardCount === 1) {
+                    document.querySelector('header h1').textContent = 'What fears are you holding back?';
+                } else if (clickedCardCount === 2) {
+                    document.querySelector('header h1').textContent = 'Your strengths';
+                } else if (clickedCardCount === 3) {
+                    document.querySelector('header h1').textContent = 'Weaknesses';
+                } else if (clickedCardCount === 4) {
+                    document.querySelector('header h1').textContent = 'Your potential';
+                }
+            });
+        });
+    }
+});
+
     </script>
 </body>
 </html>
