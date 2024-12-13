@@ -33,7 +33,7 @@ main {
     align-items: center;
     height: 100%;
     padding-top: 45px;
-    gap: 70px;
+    gap: 50px;
 }
 .container .card {
     position: absolute;
