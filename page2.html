@@ -73,6 +73,13 @@
                         card.style.display = 'none'; // Hide the card
                     }
                 });
+
+                // Reposition the selected cards
+                const selectedCards = document.querySelectorAll('.container .card.selected');
+                selectedCards.forEach((card, index) => {
+                    card.style.position = 'relative';
+                    card.style.transform = `translate(${index * 15}px, 0)`;
+                });
             }
         });
     });
