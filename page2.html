@@ -49,6 +49,11 @@
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
+            // Prevent any changes to cards with values between 1 and 5
+            if (card.dataset.value >= 1 && card.dataset.value <= 5) {
+                return;
+            }
+
             // Toggle the 'selected' class on the clicked card
             if (!card.classList.contains('selected') && selectedCardsCount < 5) {
                 card.classList.add('selected');
