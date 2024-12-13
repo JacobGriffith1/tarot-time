@@ -45,27 +45,34 @@
         document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.container .card');
     let selectedCardsCount = 0;
+    let cardValues = 1; // Start assigning values from 1
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
             // Toggle the 'selected' class on the clicked card
-            card.classList.toggle('selected');
-
-            // Increment the selectedCardsCount when a card is selected
-            if (card.classList.contains('selected')) {
+            if (!card.classList.contains('selected') && selectedCardsCount < 5) {
+                card.classList.add('selected');
+                card.dataset.value = cardValues++; // Assign a value from 1 to 5
                 selectedCardsCount++;
-            } else {
+            } else if (card.classList.contains('selected')) {
+                card.classList.remove('selected');
+                card.dataset.value = ''; // Remove the assigned value
+                cardValues--; // Decrement the value counter
                 selectedCardsCount--;
             }
 
             // Update the display of selected cards count
             document.getElementById('selected-cards-count').textContent = selectedCardsCount;
 
-            // Limit the selection to 5 cards
-            if (selectedCardsCount > 5) {
-                card.classList.remove('selected');
-                selectedCardsCount--;
-                document.getElementById('selected-cards-count').textContent = selectedCardsCount;
+            // Check if 5 cards are selected
+            if (selectedCardsCount === 5) {
+                // Assign value 0 to unselected cards and hide them
+                cards.forEach(card => {
+                    if (!card.classList.contains('selected')) {
+                        card.dataset.value = 0; // Assign value 0
+                        card.style.display = 'none'; // Hide the card
+                    }
+                });
             }
         });
     });
