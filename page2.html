@@ -13,6 +13,7 @@
         <h1>Select 5 Cards</h1>
     </header>
 
+    <div id="selected-cards-count">0</div>
     <main>
         <!-- Cards Spread -->
         <div class="container">
@@ -42,15 +43,33 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.container .card');
-    
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    // Toggle the 'selected' class on the clicked card
-                    card.classList.toggle('selected');
-                });
-            });
+    const cards = document.querySelectorAll('.container .card');
+    let selectedCardsCount = 0;
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Toggle the 'selected' class on the clicked card
+            card.classList.toggle('selected');
+
+            // Increment the selectedCardsCount when a card is selected
+            if (card.classList.contains('selected')) {
+                selectedCardsCount++;
+            } else {
+                selectedCardsCount--;
+            }
+
+            // Update the display of selected cards count
+            document.getElementById('selected-cards-count').textContent = selectedCardsCount;
+
+            // Limit the selection to 5 cards
+            if (selectedCardsCount > 5) {
+                card.classList.remove('selected');
+                selectedCardsCount--;
+                document.getElementById('selected-cards-count').textContent = selectedCardsCount;
+            }
         });
+    });
+});
     </script>
 </body>
 </html>

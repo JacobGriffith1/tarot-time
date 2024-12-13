@@ -73,3 +73,8 @@ main {
 .text {
     flex-grow: 1;
 }
+#selected-cards-count {
+    font-size: 24px;
+    color: #5DCED7;
+    text-align: center;
+}
