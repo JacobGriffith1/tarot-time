@@ -3,7 +3,7 @@ const tarotApiUrl = "https://tarot-api-3hv5.onrender.com/api/v1/cards";
 
 // Map of card names to their respective image files
 const cardImages = {
-  "The Fool": "s0-the_fool.png",
+  "The Fool": "0-the_fool.png",
   "The Magician": "1-the_magician.png",
   "Wheel of Fortune": "10-wheel_of_fortune.png",
   "Justice": "11-justice.png",
