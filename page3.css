@@ -1,0 +1,86 @@
+body {
+    background-color: #232253;
+}
+
+header {
+    padding-top: 20px;
+}
+header h1, header h4 {
+    text-align: center;
+    color: #5DCED7;
+}
+.playing-card {
+    width: calc(33.33% - 20px); /* This creates 3 columns */
+    max-width: 200px;
+}
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #000;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+.playing-card:hover .flip-card {
+    transform: rotateY(-180deg);
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+.card-front {
+    transform: rotateY(180deg);
+}
+.card {
+    width: 170px;
+    height: 300px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*margin: 0 auto;         /* Center the container itself if it has a specific width */
+    /*margin-top: 75px;*/
+    gap: 20px;
+}
+.reading-card {
+    padding-top: 20px;
+}
+.image-text {
+    display: flex;
+    gap: 20px;
+  }
+  
+.image {
+    width: 200px;
+    height: auto;
+  }
+  
+.text {
+    flex-grow: 1;
+  }
+.image-text {
+    display: flex;
+    gap: 20px;
+    padding-left: 165px;
+}
+.reading-card p {
+    font-size: 24px;
+}
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #5DCED7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
