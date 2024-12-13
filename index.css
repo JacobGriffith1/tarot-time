@@ -52,7 +52,6 @@ body {
 
 .message,
 .cardContainer {
-    z-index: 2;
     position: relative;
     text-align: center;
     color: gold;
@@ -63,7 +62,47 @@ body {
     -webkit-text-stroke-color: #f47607;
 }
 
+.cardContainer {
+    z-index: 1;
+}
+
+.message {
+    z-index: 4;
+}
+
 .card {
     size: relative;
     width: 40%;
+}
+
+.hand {
+
+    position: absolute;
+    width: 50vh;
+    animation: rotateHands 5s linear infinite;
+}
+
+.down {
+    z-index: 3;
+    top: -0%;
+    left: 50%;
+    transform-origin: bottom left;
+}
+
+.up {
+    top: 50%;
+    right: 50%;
+    transform-origin: top right;
+}
+
+@keyframes rotateHands {
+    0% {
+        transform: rotate(0deg) scale(1.5);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.5);
+    }
 }
