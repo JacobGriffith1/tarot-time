@@ -46,7 +46,12 @@
     const cards = document.querySelectorAll('.container .card');
     let selectedCardsCount = 0;
     let cardValues = 1;
-    let clickedCardCount = 0;  // Track how many selected cards have been clicked
+    let clickedCardCount = 0; // Track how many selected cards have been clicked
+    let firstCardClicked = false;
+    let secondCardClicked = false;
+    let thirdCardClicked = false;
+    let fourthCardClicked = false; 
+    let fifthCardClicked = false; // Track if the fifth card is clicked
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
@@ -92,9 +97,30 @@
             card.addEventListener('click', () => {
                 if (card.classList.contains('disabled')) return;
 
-                card.dataset.value = 'a';
+                if (!firstCardClicked) {
+                    card.dataset.value = 'a';
+                    firstCardClicked = true;
+                    console.log('First card clicked (assigned "a"):', card);
+                } else if (!secondCardClicked && document.querySelector('header h1').textContent === 'What fears are you holding back?') {
+                    card.dataset.value = 'b';
+                    secondCardClicked = true;
+                    console.log('Second card clicked (assigned "b"):', card);
+                } else if (!thirdCardClicked && document.querySelector('header h1').textContent === 'Your strengths') {
+                    card.dataset.value = 'c';
+                    thirdCardClicked = true;
+                    console.log('Third card clicked (assigned "c"):', card);
+                } else if (!fourthCardClicked && document.querySelector('header h1').textContent === 'Weaknesses') {
+                    card.dataset.value = 'd';
+                    fourthCardClicked = true;
+                    console.log('Fourth card clicked (assigned "d"):', card);
+                } else if (!fifthCardClicked && document.querySelector('header h1').textContent === 'Your potential') {
+                    card.dataset.value = 'e';
+                    fifthCardClicked = true;
+                    console.log('Fifth card clicked (assigned "e"):', card);
+                }
+
                 card.classList.add('disabled');
-                clickedCardCount++;  // Increment the count of clicked cards
+                clickedCardCount++; // Increment the count of clicked cards
 
                 // Change header text based on how many cards have been clicked
                 if (clickedCardCount === 1) {
