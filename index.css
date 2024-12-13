@@ -1,0 +1,108 @@
+/* Set the background image for the body */
+@font-face {
+    font-family: voltaire;
+    src: url(/fonts/Voltaire-Frangela.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-clip: unset;
+    height: 100vh;
+    top: 10%;
+}
+
+.space {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space::before {
+    content: '';
+    position: absolute;
+    top: -75%;
+    left: -75%;
+    width: 250%;
+    height: 250%;
+    background-image: url(images/space_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+    animation: rotateSlow 720s linear infinite;
+    z-index: 0;
+    transform-origin: center center;
+}
+
+@keyframes rotateSlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message,
+.cardContainer {
+    position: relative;
+    text-align: center;
+    color: gold;
+    font-family: voltaire;
+    font-style: italic;
+    font-size: 24px;
+    -webkit-text-stroke: .1px;
+    -webkit-text-stroke-color: #f47607;
+}
+
+.cardContainer {
+    z-index: 1;
+}
+
+.message {
+    z-index: 4;
+}
+
+.card {
+    size: relative;
+    width: 40%;
+}
+
+.hand {
+
+    position: absolute;
+    width: 50vh;
+    animation: rotateHands 5s linear infinite;
+}
+
+.down {
+    z-index: 3;
+    top: -0%;
+    left: 50%;
+    transform-origin: bottom left;
+}
+
+.up {
+    top: 50%;
+    right: 50%;
+    transform-origin: top right;
+}
+
+@keyframes rotateHands {
+    0% {
+        transform: rotate(0deg) scale(1.5);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.5);
+    }
+}
