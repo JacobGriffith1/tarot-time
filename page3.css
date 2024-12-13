@@ -10,7 +10,7 @@ header h1, header h4 {
     color: #5DCED7;
 }
 .playing-card {
-    width: calc(33.33% - 20px); /* This creates 3 columns */
+    width: calc(3% - 20px); /* This creates 3 columns */
     max-width: 200px;
 }
 .flip-card {
@@ -43,8 +43,6 @@ header h1, header h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /*margin: 0 auto;         /* Center the container itself if it has a specific width */
-    /*margin-top: 75px;*/
     gap: 20px;
 }
 .reading-card {
