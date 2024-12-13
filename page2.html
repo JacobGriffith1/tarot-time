@@ -45,50 +45,59 @@
         document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.container .card');
     let selectedCardsCount = 0;
-    let cardValues = 1; // Start assigning values from 1
+    let cardValues = 1;
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            // Prevent any changes to cards with values between 1 and 5
-            if (card.dataset.value >= 1 && card.dataset.value <= 5) {
-                return;
-            }
+            if (card.dataset.value >= 1 && card.dataset.value <= 5) return;
 
-            // Toggle the 'selected' class on the clicked card
             if (!card.classList.contains('selected') && selectedCardsCount < 5) {
                 card.classList.add('selected');
-                card.dataset.value = cardValues++; // Assign a value from 1 to 5
+                card.dataset.value = cardValues++;
                 selectedCardsCount++;
             } else if (card.classList.contains('selected')) {
                 card.classList.remove('selected');
-                card.dataset.value = ''; // Remove the assigned value
-                cardValues--; // Decrement the value counter
+                card.dataset.value = '';
+                cardValues--;
                 selectedCardsCount--;
             }
 
-            // Update the display of selected cards count
             document.getElementById('selected-cards-count').textContent = selectedCardsCount;
 
-            // Check if 5 cards are selected
             if (selectedCardsCount === 5) {
-                // Assign value 0 to unselected cards and hide them
+                document.querySelector('header h1').textContent = 'Current Situation';
+                document.querySelector('header').classList.add('current-situation');
+
                 cards.forEach(card => {
                     if (!card.classList.contains('selected')) {
-                        card.dataset.value = 0; // Assign value 0
-                        card.style.display = 'none'; // Hide the card
+                        card.dataset.value = 0;
+                        card.style.display = 'none';
                     }
                 });
 
-                // Reposition the selected cards
                 const selectedCards = document.querySelectorAll('.container .card.selected');
                 selectedCards.forEach((card, index) => {
                     card.style.position = 'relative';
                     card.style.transform = `translate(${index * 15}px, 0)`;
                 });
+
+                enableCardClicks(selectedCards);
             }
         });
     });
+
+    function enableCardClicks(selectedCards) {
+        selectedCards.forEach(card => {
+            card.addEventListener('click', () => {
+                if (card.classList.contains('disabled')) return;
+
+                card.dataset.value = 'a';
+                card.classList.add('disabled');
+            });
+        });
+    }
 });
+
     </script>
 </body>
 </html>

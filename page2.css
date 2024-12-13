@@ -12,6 +12,13 @@ header {
     z-index: 1000;
     text-align: center;
 }
+header.current-situation h1 {
+    color: #FDC941;
+}
+.container .card.disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* Dim the appearance of clicked cards */
+}
 main {
     flex-grow: 1;
     overflow: auto;
