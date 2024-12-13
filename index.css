@@ -1,4 +1,9 @@
 /* Set the background image for the body */
+@font-face {
+    font-family: voltaire;
+    src: url(/fonts/Voltaire-Frangela.ttf);
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -50,7 +55,15 @@ body {
     z-index: 2;
     position: relative;
     text-align: center;
-    color: yellow;
-    -webkit-text-stroke: .7px;
-    -webkit-text-stroke-color: blueviolet;
+    color: gold;
+    font-family: voltaire;
+    font-style: italic;
+    font-size: 24px;
+    -webkit-text-stroke: .1px;
+    -webkit-text-stroke-color: #f47607;
+}
+
+.card {
+    size: relative;
+    width: 40%;
 }
