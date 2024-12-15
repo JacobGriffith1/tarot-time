@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: #232253;
-    overflow: hidden;
+    overflow-y: auto;
 }
 header {
     color: #5DCED7;
@@ -68,12 +68,6 @@ main {
     color: #5DCED7;
     text-align: center;
 }
-
-/* new styles */
-.reading-card {
-    padding-top: 20px;
-
-}
 .image-text {
     display: flex;
     gap: 20px;
@@ -85,4 +79,16 @@ main {
 }
 .text {
     flex-grow: 1;
+}
+.card-spread {
+    margin-bottom: 190px;
+}
+.your-reading {
+    margin-top: 50px;
+}
+.reading-card {
+    margin-top: 40px;
+}
+.reading-card p {
+    font-size: 24px;
 }
