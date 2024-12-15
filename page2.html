@@ -184,6 +184,9 @@
                 </aside>
             </div>
         </section>
+        <footer>
+            <button type="button" id="restartButton">RESTART</button>
+        </footer>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -199,6 +202,12 @@
     let selectedCards = [];
     let selectedCardsCount = 0;
     let clickedCardCount = 0;
+
+    const restartButton = document.getElementById('restartButton');
+
+    restartButton.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
 
     // Initial card selection logic
     cards.forEach(card => {
