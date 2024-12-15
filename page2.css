@@ -11,6 +11,7 @@ body {
     background: #232253;
     overflow-y: auto;
 }
+
 header {
     color: #5DCED7;
     padding-top: 70px;
@@ -20,10 +21,11 @@ header {
     font-family: voltaire;
 }
 
-.container .card.disabled {
+/*.container .card.disabled {
     cursor: not-allowed;
-    opacity: 0.5; /* Dim the appearance of clicked cards */
+    opacity: 0.5;
 }
+*/
 main {
     flex-grow: 1;
     overflow: auto;
@@ -38,7 +40,7 @@ main {
     align-items: center;
     height: 100%;
     padding-top: 45px;
-    gap: 50px;
+    gap: 35px;
 }
 .container .card {
     position: absolute;
@@ -60,6 +62,7 @@ main {
     transform: rotate(calc(var(--i) * 0deg)) translate(calc(var(--i) * 45px), -50px);
     box-shadow: 0 15px 50px rgba(0,0,0,0.25);
 }
+/* Controls movement up after card selected in 22 spread */
 .container .card.selected {
     translate: calc(var(--i) * 1px) -50px;
     z-index: 100;
@@ -68,18 +71,14 @@ main {
     translate: calc(var(--i) *1px) -50px;
     z-index: 100;
 }
-#selected-cards-count {
-    font-size: 24px;
-    color: #5DCED7;
-    text-align: center;
-}
+/* Tarot Reading Content Aside */
 .image-text {
     display: flex;
     gap: 20px;
     padding-left: 165px;
 }
-.card {
-    width: 170px;
+.card img {
+    width: 160px;
     height: 300px;
 }
 .text {
