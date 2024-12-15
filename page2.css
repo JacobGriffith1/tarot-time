@@ -1,3 +1,9 @@
+/* Set the background image for the body */
+@font-face {
+    font-family: voltaire;
+    src: url(/fonts/Voltaire-Frangela.ttf);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -11,10 +17,9 @@ header {
     padding-bottom: 30px;
     z-index: 1000;
     text-align: center;
+    font-family: voltaire;
 }
-header.current-situation h1 {
-    color: #FDC941;
-}
+
 .container .card.disabled {
     cursor: not-allowed;
     opacity: 0.5; /* Dim the appearance of clicked cards */
