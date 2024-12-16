@@ -89,7 +89,7 @@
 
         <!-- Your Tarot Reading Content -->
         <section class="your-reading">
-            <article class="reading-card">
+            <div class="reading-card">
                 <aside class="image-text">
                     <div class="card">
                         <img src="images/0-the_fool.png">
@@ -106,7 +106,7 @@
                                                     eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt exp.</p>
                     </div>
                 </aside>
-            </article>
+            </div>
             <hr style="margin-top: 50px; width: 80%">
             <div class="reading-card">
                 <aside class="image-text">
@@ -209,7 +209,7 @@
         window.location.href = 'index.html';
     });
 
-    // Initial card selection logic
+    // Card selection logic
     cards.forEach(card => {
         card.addEventListener('click', () => {
             if (!card.classList.contains('selected') && selectedCardsCount < 5) {
@@ -258,6 +258,29 @@
         const value = String.fromCharCode(97 + clickedCardCount); // a, b, c, ...
         card.dataset.value = value;
         card.classList.add('disabled');
+
+        // Update the card image based on the value
+        const img = card.querySelector('img');
+        switch (value) {
+            case 'a':
+                img.src = 'images/0-the_fool.png';
+                break;
+            case 'b':
+                img.src = 'images/1-the_magician.png';
+                break;
+            case 'c':
+                img.src = 'images/2-the_high_priestess.png';
+                break;
+            case 'd':
+                img.src = 'images/3-the_empress.png';
+                break;
+            case 'e':
+                img.src = 'images/4-the_emperor.png';
+                break;
+            default:
+                console.log("No matching image found");
+        }
+
         console.log(`Card assigned "${value}":`, card);
 
         clickedCardCount++;
