@@ -19,25 +19,32 @@
 </details>
 
 ## :memo: <span id="description">Description</span>
-This project, built around the theme of animation, is a custom-designed 2+ page website. Our goal was to create a dynamic and engaging site that incorporates animations using modern web technologies such as CSS and JavaScript. The theme is open to interpretation, allowing us to explore personal interests and craft a site that reflects our unique vision and skills.
+For our T3 end-of-trimester project, we were tasked with building a custom website based on the theme of animation. After brainstorming, our team landed on the idea of a tarot card reading experience. We were excited by the challenge of animating card spreads, card flips, and integrating these animations with stored data for personalized readings. Using the skills we developed throughout the trimester, we collaborated to bring this concept to life!
 
-Whether it’s a website for a fictional animation studio or an entirely different topic with integrated animations, this project demonstrates creativity, technical acumen, and the culmination of skills we've acquired throughout the trimester.
 ## :sunny: <span id="features">Features & Highlights</span>
 
 These are the features of our website:
 * Landing page with an eye-catching animation
 * Simulated tarot reading utilizing animations and API calls
 * Detailed breakdown of each revealed card's significance to the reading
+
 ## :computer: <span id="design">Brainstorming & Design</span>
 
-* talk about mockups, sketches, design, vision, identify potential challenges
+The team drew inspiration from the iconic Rider-Waite Tarot Deck, appreciating its timeless design and symbolism. This served as the foundation for our site's overall aesthetic.
+
+For the color palette, we explored a celestial theme featuring shades of blue and gold, complemented by purple accents. Purple was particularly appealing due to its harmony with the yellow tones often found in Rider-Waite cards. Together, these colors created a cohesive and visually pleasing combination.
+
+Our design goals were centered on delivering a celestial, dark aesthetic that feels immersive while ensuring the site remains intuitive and easy to navigate for users.
+
+[Link to the mockup Design](https://app.uizard.io/prototypes/LOl1W8mjZncLzq9VwlWM/player/preview)
 
 ## :floppy_disk: <span id="implementation">Implementation</span>
 
-* talk about what frameworks we ended up using.
+Our site was built using a combination of HTML, CSS, and JavaScript to achieve both its design and functionality.
 ## :sweat_smile: <span id="challenges">Overcoming Challenges</span>
 
 We quickly discovered that animation was no simple task. Since none of us had animated on this scale, the animation workload was divided, with Jacob handling landing page and card flip animations, and Jaylen handling the animation of cards during the reading.
+
 
 Due to the nature of the Rider-Waite tarot illustrations featuring some nudity, it was deemed necessary to censor several cards. Jacob was tasked with editing these illustrations for an all-ages appropriate aesthetic.
 
