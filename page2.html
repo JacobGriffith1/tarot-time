@@ -147,19 +147,27 @@
                 });
             }
 
+            // Card names corresponding to the images
+const cardNames = [
+    "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", 
+    "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit", 
+    "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance", 
+    "The Devil", "The Tower", "The Star", "The Moon", "The Sun", 
+    "Judgement", "The World"
+];
+
             // Function to handle card click for tarot reading
             function handleCardClick(card) {
                 if (card.classList.contains('disabled')) return;
-
-                const value = String.fromCharCode(97 + clickedCardCount);
-                card.dataset.value = value;
-                card.classList.add('disabled');
 
                 const img = card.querySelector('img');
                 const randomIndex = Math.floor(Math.random() * cardImages.length);
                 const selectedImage = cardImages[randomIndex];  // Store the selected image separately
                 img.src = selectedImage;  // Set image src as the selected image
 
+                const cardName = cardNames[cardImages.indexOf(selectedImage)];
+
+                card.classList.add('disabled');
                 cardImages.splice(randomIndex, 1); // Remove used image from the pool
                 clickedCardCount++;
 
@@ -168,7 +176,7 @@
                 }
 
                 // Add the card to the tarot reading section
-                addReadingCard(selectedImage, value);  // Use selectedImage for the reading
+                addReadingCard(selectedImage, cardName);  // Use selectedImage for the reading
             }
 
             // Function to add a card to the reading section
