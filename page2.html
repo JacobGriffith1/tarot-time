@@ -259,29 +259,42 @@
         card.dataset.value = value;
         card.classList.add('disabled');
 
-        // Update the card image based on the value
-        const img = card.querySelector('img');
-        switch (value) {
-            case 'a':
-                img.src = 'images/0-the_fool.png';
-                break;
-            case 'b':
-                img.src = 'images/1-the_magician.png';
-                break;
-            case 'c':
-                img.src = 'images/2-the_high_priestess.png';
-                break;
-            case 'd':
-                img.src = 'images/3-the_empress.png';
-                break;
-            case 'e':
-                img.src = 'images/4-the_emperor.png';
-                break;
-            default:
-                console.log("No matching image found");
-        }
+// Array of all 22 card image paths
+const cardImages = [
+    'images/0-the_fool.png',
+    'images/1-the_magician.png',
+    'images/2-the_high_priestess.png',
+    'images/3-the_empress.png',
+    'images/4-the_emperor.png',
+    'images/5-the_hierophant.png',
+    'images/6-the_lovers.png',
+    'images/7-the_chariot.png',
+    'images/8-strength.png',
+    'images/9-the_hermit.png',
+    'images/10-wheel_of_fortune.png',
+    'images/11-justice.png',
+    'images/12-the_hanged_man.png',
+    'images/13-death.png',
+    'images/14-temperance.png',
+    'images/15-the_devil.png',
+    'images/16-the_tower.png',
+    'images/17-the_star.png',
+    'images/18-the_moon.png',
+    'images/19-the_sun.png',
+    'images/20-judgement.png',
+    'images/21-the_world.png'
+];
 
-        console.log(`Card assigned "${value}":`, card);
+// Update the card image with a random card
+const img = card.querySelector('img');
+
+// Get a random index from the cardImages array
+const randomIndex = Math.floor(Math.random() * cardImages.length);
+
+// Set the image source to the randomly chosen card
+img.src = cardImages.splice(randomIndex, 1)[0];
+
+        console.log(`Card assigned ${img.src}`, card);
 
         clickedCardCount++;
 
