@@ -23,12 +23,11 @@ For our T3 end-of-trimester project, we were tasked with building a custom websi
 
 ## :sunny: <span id="features">Features & Highlights</span>
 
-Features of our project:
+These are the features of our website:
+* Landing page with an eye-catching animation
+* Simulated tarot reading utilizing animations and API calls
+* Detailed breakdown of each revealed card's significance to the reading
 
-- **Animated Homepage**: A visually dynamic homepage featuring moving hand animations
-- **22-Card Spread**: Represents all the Major Arcana cards in a beautifully designed spread.
-- **School-Appropriate Custom Card Images**: Redesigned card illustrations to ensure they are suitable for school setting by removing nudity while maintaining their artistic essence.
-- **Custom Database Integration**: A database storing 5 distinct meanings for each card, seamlessly integrated into the user experience.
 ## :computer: <span id="design">Brainstorming & Design</span>
 
 The team drew inspiration from the iconic Rider-Waite Tarot Deck, appreciating its timeless design and symbolism. This served as the foundation for our site's overall aesthetic.
@@ -44,12 +43,16 @@ Our design goals were centered on delivering a celestial, dark aesthetic that fe
 Our site was built using a combination of HTML, CSS, and JavaScript to achieve both its design and functionality.
 ## :sweat_smile: <span id="challenges">Overcoming Challenges</span>
 
-One of the unexpected challenges we encountered was addressing the nudity present in some of the tarot cards. To ensure the project was school-appropriate, our team member Jacob devoted considerable time to redesigning these cards while maintaining their original essence and artistic integrity.
+We quickly discovered that animation was no simple task. Since none of us had animated on this scale, the animation workload was divided, with Jacob handling landing page and card flip animations, and Jaylen handling the animation of cards during the reading.
 
-Another significant challenge was finding an API that supported a 5-card spread. After an extensive search, we realized such an API wasn’t available, so Tamara took the initiative to create a custom database to meet our needs.
 
-We also faced difficulties with the card functionality. Our goal was to implement an arched 22-card spread, complemented by flip animations for the 5 selected cards. While we initially planned to accomplish this using CSS, integrating these features proved to be more complex than anticipated due to the intricacies of the card interactions.
+Due to the nature of the Rider-Waite tarot illustrations featuring some nudity, it was deemed necessary to censor several cards. Jacob was tasked with editing these illustrations for an all-ages appropriate aesthetic.
 
+Jaylen was instrumental in the front-end design process, creating a framework that would expedite the workflow for the entire team, and handling the majority of front-end interactivity during the reading.
+
+Tamara was the back-end specialist for this project and diligently worked through the whole design process to ensure that the API implementation worked just right. Thanks to her hard work, the design and interactivity of the front-end was given form, allowing cards to actually be revealed from a virtual deck.
+
+Thanks to everyone's hard hours of labor dedicated to designing this website, we are quite happy with what we have accomplished!
 
 ## :sparkles: <span id="authors">Authors</span>
 
