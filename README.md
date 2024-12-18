@@ -25,10 +25,10 @@ For our T3 end-of-trimester project, we were tasked with building a custom websi
 
 Features of our project:
 
-**Animated Homepage**: A visually dynamic homepage featuring moving hand animations
-**22-Card Spread**: Represents all the Major Arcana cards in a beautifully designed spread.
-**School-Appropriate Custom Card Images**: Redesigned card illustrations to ensure they are suitable for school setting by removing nudity while maintaining their artistic essence.
-**Custom Database Integration**: A database storing 5 distinct meanings for each card, seamlessly integrated into the user experience.
+- **Animated Homepage**: A visually dynamic homepage featuring moving hand animations
+- **22-Card Spread**: Represents all the Major Arcana cards in a beautifully designed spread.
+- **School-Appropriate Custom Card Images**: Redesigned card illustrations to ensure they are suitable for school setting by removing nudity while maintaining their artistic essence.
+- **Custom Database Integration**: A database storing 5 distinct meanings for each card, seamlessly integrated into the user experience.
 ## :computer: <span id="design">Brainstorming & Design</span>
 
 The team drew inspiration from the iconic Rider-Waite Tarot Deck, appreciating its timeless design and symbolism. This served as the foundation for our site's overall aesthetic.
