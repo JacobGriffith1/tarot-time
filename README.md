@@ -25,9 +25,9 @@ Whether it’s a website for a fictional animation studio or an entirely differe
 ## :sunny: <span id="features">Features & Highlights</span>
 
 These are the features of our website:
-* this
-* this too
-* and this
+* Landing page with an eye-catching animation
+* Simulated tarot reading utilizing animations and API calls
+* Detailed breakdown of each revealed card's significance to the reading
 ## :computer: <span id="design">Brainstorming & Design</span>
 
 * talk about mockups, sketches, design, vision, identify potential challenges
@@ -37,8 +37,15 @@ These are the features of our website:
 * talk about what frameworks we ended up using.
 ## :sweat_smile: <span id="challenges">Overcoming Challenges</span>
 
-* talk about how we overcame some challenges *
+We quickly discovered that animation was no simple task. Since none of us had animated on this scale, the animation workload was divided, with Jacob handling landing page and card flip animations, and Jaylen handling the animation of cards during the reading.
 
+Due to the nature of the Rider-Waite tarot illustrations featuring some nudity, it was deemed necessary to censor several cards. Jacob was tasked with editing these illustrations for an all-ages appropriate aesthetic.
+
+Jaylen was instrumental in the front-end design process, creating a framework that would expedite the workflow for the entire team, and handling the majority of front-end interactivity during the reading.
+
+Tamara was the back-end specialist for this project and diligently worked through the whole design process to ensure that the API implementation worked just right. Thanks to her hard work, the design and interactivity of the front-end was given form, allowing cards to actually be revealed from a virtual deck.
+
+Thanks to everyone's hard hours of labor dedicated to designing this website, we are quite happy with what we have accomplished!
 
 ## :sparkles: <span id="authors">Authors</span>
 
