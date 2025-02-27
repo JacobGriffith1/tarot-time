@@ -148,13 +148,30 @@
             }
 
             // Card names corresponding to the images
-const cardNames = [
-    "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", 
-    "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit", 
-    "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance", 
-    "The Devil", "The Tower", "The Star", "The Moon", "The Sun", 
-    "Judgement", "The World"
-];
+            const cardNames = {
+                'images/0-the_fool.png': "The Fool",
+                'images/1-the_magician.png': "The Magician",
+                'images/2-the_high_priestess.png': "The High Priestess",
+                'images/3-the_empress.png': "The Empress",
+                'images/4-the_emperor.png': "The Emperor", 
+                'images/5-the_hierophant.png': "The Hierophant",
+                'images/6-the_lovers.png': "The Lovers",
+                'images/7-the_chariot.png': "The Chariot",
+                'images/8-strength.png': "Strength",
+                'images/9-the_hermit.png': "The Hermit", 
+                'images/10-wheel_of_fortune.png': "Wheel of Fortune",
+                'images/11-justice.png': "Justice",
+                'images/12-the_hanged_man.png': "The Hanged Man",
+                'images/13-death.png': "Death",
+                'images/14-temperance.png': "Temperance", 
+                'images/15-the_devil.png': "The Devil",
+                'images/16-the_tower.png': "The Tower",
+                'images/17-the_star.png': "The Star",
+                'images/18-the_moon.png': "The Moon",
+                'images/19-the_sun.png': "The Sun", 
+                'images/20-judgement.png': "Judgement",
+                'images/21-the_world.png': "The World"
+            }
 
             // Function to handle card click for tarot reading
             function handleCardClick(card) {
@@ -180,7 +197,7 @@ const cardNames = [
             }
 
             // Function to add a card to the reading section
-            function addReadingCard(imageSrc, value) {
+            function addReadingCard(imageSrc, cardName) {
                 const readingCard = document.createElement('div');
                 readingCard.classList.add('reading-card');
 
@@ -199,9 +216,10 @@ const cardNames = [
 
                 // Look up the fortune based on the selected image
                 const fortune = fortunes[imageSrc] || "The universe holds mysteries for you to unravel."; // Default fallback
+                const value = cardNames[imageSrc];
 
                 text.innerHTML = `
-                    <h3 style="color: #F5F5F5;">${headers[clickedCardCount]}</h3>
+                    <h3 style="color: #F5F5F5;">${headers[clickedCardCount - 1]}</h3>
                     <h5 style="color: #5DCED7;">${value.toUpperCase()}</h5>
                     <p style="color:#F5F5F5;">${fortune}</p>
                 `;
