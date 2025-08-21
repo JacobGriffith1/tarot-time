@@ -1,5 +1,7 @@
 # <p align="center">TAROT TIME</p>
 
+![Screenshot of app](images/tarot-landing.png)
+
 ## :star: Table of Contents
 <details>
         <summary>
