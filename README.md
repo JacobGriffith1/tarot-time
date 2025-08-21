@@ -1,4 +1,4 @@
-# <p align="center">ANIMATION T3</p>
+# <p align="center">TAROT TIME</p>
 
 ## :star: Table of Contents
 <details>
@@ -20,6 +20,8 @@
 
 ## :memo: <span id="description">Description</span>
 For our T3 end-of-trimester project, we were tasked with building a custom website based on the theme of animation. After brainstorming, our team landed on the idea of a tarot card reading experience. We were excited by the challenge of animating card spreads, card flips, and integrating these animations with stored data for personalized readings. Using the skills we developed throughout the trimester, we collaborated to bring this concept to life!
+
+It's Tarot Time!
 
 ## :sunny: <span id="features">Features & Highlights</span>
 
@@ -64,3 +66,4 @@ Thanks to everyone's hard hours of labor dedicated to designing this website, we
 
 **Jacob Griffith**
 - Github: [@JacobGriffith1](https://github.com/JacobGriffith1)
+"My name is Jacob Griffith, and I'm ready to help you build your next website! Whether you're looking for a professional design for a law practice, something inviting for a restaurant, a fun landing page for a tourist attraction, or anything in between, I'm your guy for the job. I am very adaptable, so I can provide whatever web design services you require to reach your goals! Feel free to send me an email at jacobgriffith6339@gmail.com to get in touch. I'll get back to you in 2-3 days, or sooner when possible."
